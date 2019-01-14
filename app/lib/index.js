@@ -2,18 +2,12 @@
 
 const windowStateKeeper = require('electron-window-state');
 const path = require('path');
-const open = require('open');
+const open = require('opn');
 const {
   app,
   ipcMain,
-  BrowserWindow,
-  session
-} = require('electron')<
-
-session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
-  details.requestHeaders['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134';
-  callback({ cancel: false, requestHeaders: details.requestHeaders });
-});
+  BrowserWindow
+} = require('electron');
 
 const configBuilder = require('./config');
 
@@ -80,7 +74,8 @@ app.on('ready', () => {
 
   if (config.userAgent === 'edge') {
     window.webContents.setUserAgent(config.edgeUserAgent);
-  } else {
+  }
+  else {
     window.webContents.setUserAgent(config.chromeUserAgent);
   }
   

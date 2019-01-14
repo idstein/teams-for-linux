@@ -1,6 +1,6 @@
 'use strict';
 
-const open = require('open');
+const open = require('opn');
 
 exports = module.exports = (app) => {
   return {

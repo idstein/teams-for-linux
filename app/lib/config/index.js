@@ -42,7 +42,7 @@ function argv(configPath) {
         demandOption: false,
         describe: 'Microsoft Edge User Agent',
         type: 'string',
-        default: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299'
+        default: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134'
       },
       'chromeUserAgent': {
         demandOption: false,

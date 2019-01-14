@@ -1,6 +1,6 @@
 {
   "name": "teams-for-linux",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Unofficial client for Microsoft Teams for Linux",
   "homepage": "https://github.com/ivelkov/teams-for-linux",
   "keywords": [
@@ -20,8 +20,8 @@
     "dist": "build"
   },
   "devDependencies": {
-    "electron": "^1.8.4",
-    "electron-builder": "^20.8.2"
+    "electron": "3.1.0",
+    "electron-builder": "20.38.4"
   },
   "build": {
     "appId": "teams-for-linux",
