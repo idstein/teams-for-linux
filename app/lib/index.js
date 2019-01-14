@@ -6,8 +6,15 @@ const open = require('open');
 const {
   app,
   ipcMain,
-  BrowserWindow
-} = require('electron');
+  BrowserWindow,
+  session
+} = require('electron')<
+
+session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
+  details.requestHeaders['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134';
+  callback({ cancel: false, requestHeaders: details.requestHeaders });
+});
+
 const configBuilder = require('./config');
 
 const DEFAULT_WINDOW_WIDTH = 800;
